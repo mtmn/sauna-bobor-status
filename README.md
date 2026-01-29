@@ -1,4 +1,4 @@
-# Sauna Bobor Status
+# bobor_status
 
 A simple web application to monitor [Danube river measurements](https://www.shmu.sk/sk/?page=765&station_id=5140) and [Sauna Bobor](https://saunabobor.sk) capacity.
 
