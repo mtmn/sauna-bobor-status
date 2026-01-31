@@ -1,31 +1,17 @@
 # bobor_status
+Flask application that monitors [Danube river](https://www.shmu.sk/sk/?page=765&station_id=5140) and [Sauna Bobor](https://saunabobor.sk) metrics and provides endpoints for further processing.
 
-A simple web application to monitor [Danube river measurements](https://www.shmu.sk/sk/?page=765&station_id=5140) and [Sauna Bobor](https://saunabobor.sk) capacity.
-
-- **Backend**: Python (Flask) with scheduled tasks using [Huey](https://github.com/coleifer/huey) to scrape external sources.
-- **Frontend**: Vue.js (Vite).
-
-## Development
-
-### Python
+### Flask
 
 ```bash
-poetry install
-poetry run flask --app app run
+make install # runs `poetry install`
+make dev     # starts development server
 ```
 
-### Node
+### Vue
 
 ```bash
 cd frontend
 npm install
 npm run dev
-npm run build
 ```
-
-## Deployment
-
-I am using [fly.io](https://fly.io) as its simplicity fits the purpose of this application.
-
-> [!NOTE]
-Make sure only one replica is running since the data is stored in-memory.

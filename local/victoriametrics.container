@@ -1,0 +1,15 @@
+[Unit]
+Description=VictoriaMetrics
+After=network-online.target
+
+[Container]
+Network=host
+Image=docker.io/victoriametrics/victoria-metrics:latest
+ContainerName=victoriametrics
+Volume=%h/.config/bobor/dashboards:/dashboards:Z
+Volume=victoriametrics-data:/victoria-metrics-data
+Volume=%h/.config/bobor/prometheus.yml:/prometheus.yml:Z
+Exec=-promscrape.config=/prometheus.yml -storageDataPath=/victoria-metrics-data -httpListenAddr=:8428 -vmui.customDashboardsPath=/dashboards
+
+[Service]
+Restart=always

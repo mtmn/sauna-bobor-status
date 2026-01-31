@@ -1,0 +1,45 @@
+{
+    "title": "Bobor Status",
+    "rows": [
+        {
+            "title": "Water Conditions",
+            "panels": [
+                {
+                    "title": "Water Temperature",
+                    "type": "graph",
+                    "expr": [
+                        "shmu_water_temperature"
+                    ]
+                },
+                {
+                    "title": "Water Level",
+                    "type": "graph",
+                    "expr": [
+                        "shmu_water_level"
+                    ]
+                },
+                {
+                    "title": "Bobor Capacity",
+                    "type": "graph",
+                    "expr": [
+                        "bobor_capacity"
+                    ]
+                },
+                {
+                    "title": "Sauna Temperature",
+                    "type": "graph",
+                    "expr": [
+                        "sauna_temperature"
+                    ]
+                },
+                {
+                    "title": "Sauna Door Open (1=yes, 0=no)",
+                    "type": "graph",
+                    "expr": [
+                        "sauna_door_closed"
+                    ]
+                }
+            ]
+        }
+    ]
+}
